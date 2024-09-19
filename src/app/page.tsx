@@ -2,12 +2,14 @@ import Header from "./_components/Header";
 import HeroSection from "./_components/Hero";
 import DotPattern from "@/components/ui/dot-pattern";
 import { ny } from "@/lib/utils";
+// import { AICourseText } from "./_components/AICourseText";
 export default function Home() {
   return (
     <>
       <div>
         <Header />
         <HeroSection />
+        {/* <AICourseText/> */}
       </div>
       <DotPattern
         className={ny(
