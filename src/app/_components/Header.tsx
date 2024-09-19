@@ -5,12 +5,16 @@ import ShinyButton from "@/components/ui/shiny-button";
 import { useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
+import { ModeToggle } from "@/components/ModeToggle";
 
 const Header = () => {
   const { user } = useUser();
   return (
     <div className="flex justify-between p-5 shadow-sm">
       <Image src={"/mainlogoscale.png"} alt="logo" width={150} height={100} priority className="object-cover" />
+      <div>
+        <ModeToggle />
+      </div>
       {!user ? (
         <Link href="/sign-up">
           <ShinyButton text="Sign Up" />

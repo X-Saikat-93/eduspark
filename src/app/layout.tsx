@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { ClerkLoaded, ClerkProvider, GoogleOneTap } from "@clerk/nextjs";
-
+import { ThemeProvider } from "@/components/theme-provider";
 const inter = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,7 +21,15 @@ export default function RootLayout({
       <ClerkProvider>
         <GoogleOneTap />
         <body className={inter.className}>
-          <ClerkLoaded>{children}</ClerkLoaded>
+          <ClerkLoaded>
+            <ThemeProvider
+              attribute='class'
+              defaultTheme='system'
+              enableSystem
+              disableTransitionOnChange>
+              {children}
+            </ThemeProvider>
+          </ClerkLoaded>
         </body>
       </ClerkProvider>
     </html>
