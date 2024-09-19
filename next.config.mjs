@@ -1,14 +1,45 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+
   images: {
-    domains: [
-      "127.0.0.1",
-      "images.unsplash.com",
-      "unsplash.com",
-      "plus.unsplash.com",
-      "firebasestorage.googleapis.com",
-      "img.clerk.com",
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "127.0.0.1",
+        port: "",
+        pathname: "/**", // Allow all paths from this hostname
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+        pathname: "/**", // Allow all paths from this hostname
+      },
+      {
+        protocol: "https",
+        hostname: "unsplash.com",
+        port: "",
+        pathname: "/**", // Allow all paths from this hostname
+      },
+      {
+        protocol: "https",
+        hostname: "plus.unsplash.com",
+        port: "",
+        pathname: "/**", // Allow all paths from this hostname
+      },
+      {
+        protocol: "https",
+        hostname: "firebasestorage.googleapis.com",
+        port: "",
+        pathname: "/**", // Allow all paths from this hostname
+      },
+      {
+        protocol: "https",
+        hostname: "img.clerk.com",
+        port: "",
+        pathname: "/**", // Allow all paths from this hostname
+      },
     ],
   },
 
