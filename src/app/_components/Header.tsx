@@ -5,7 +5,7 @@ import ShinyButton from "@/components/ui/shiny-button";
 import { useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
-import { ModeToggle } from "@/components/ModeToggle";
+import { ModeToggle } from "@/components/modeToggle";
 
 const Header = () => {
   const { user } = useUser();
