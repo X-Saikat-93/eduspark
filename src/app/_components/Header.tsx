@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import ShinyButton from "@/components/shiny-button";
+import ShinyButton from "@/components/ui/shiny-button";
 import { useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";

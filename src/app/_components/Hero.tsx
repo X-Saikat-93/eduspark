@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { GradientTextAnimation } from "./textAnimations/GradientTextAnimation";
+import { GradientTextAnimation } from "@/components/ui/GradientTextAnimation";
 import PulsatingButton from "@/components/ui/pulsating-button";
 import WordPullUp from "@/components/ui/word-pull-up";
 import { useUser } from "@clerk/nextjs";
 import ShinyButton from "@/components/ui/shiny-button";
 
-const Hero = () => {
+const HeroSection = () => {
   const { user } = useUser();
   return (
     <section className="py-20 md:py-32">
@@ -49,4 +49,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;
