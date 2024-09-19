@@ -1,5 +1,5 @@
+import DropdownMenuRadioGroupDemo from "@/components/dropdown-check";
 import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/mode-toggle";
 export default function Home() {
   return (
     <>
@@ -10,7 +10,7 @@ export default function Home() {
           check
         </Button>
 
-        <ModeToggle/>
+        <DropdownMenuRadioGroupDemo/>
 </div>
     </>
   );
