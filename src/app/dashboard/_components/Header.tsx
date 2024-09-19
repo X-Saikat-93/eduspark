@@ -1,10 +1,11 @@
 import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import React from "react";
+import { ModeToggle } from "@/components/modeToggle";
 
 const Header = () => {
   return (
-    <div className='flex justify-between items-center p-5 shadow-sm'>
+    <header className='sticky top-0 z-50 flex items-center justify-between p-4 shadow-md bg-white bg-opacity-80  dark:bg-gray-900 dark:bg-opacity-80'>
       <Image
         src='/mainlogoscale.png'
         alt='logo'
@@ -13,8 +14,11 @@ const Header = () => {
         priority
         className='object-cover'
       />
-      <UserButton />
-    </div>
+      <div className='flex items-center space-x-4'>
+        <ModeToggle />
+        <UserButton />
+      </div>
+    </header>
   );
 };
 
