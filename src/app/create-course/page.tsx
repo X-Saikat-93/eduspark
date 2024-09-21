@@ -95,7 +95,7 @@ const CreateCoursePage = () => {
               <div className="flex flex-col items-center w-[50px] md:w-[100px]">
                 <div
                   className={`bg-gray-200 p-3 rounded-full text-white ${
-                    step >= index && "bg-blue-600"
+                    step >= index && "bg-green-600"
                   }`}
                 >
                   <option.icon />
@@ -105,7 +105,7 @@ const CreateCoursePage = () => {
               {index != stepperOptions.length - 1 && (
                 <div
                   className={`h-1 w-[50px] md-w-[100px] rounded-full lg:w-[170px] bg-gray-300 ${
-                    step > index && "bg-purple-500"
+                    step > index && "bg-green-400"
                   }`}
                 ></div>
               )}
