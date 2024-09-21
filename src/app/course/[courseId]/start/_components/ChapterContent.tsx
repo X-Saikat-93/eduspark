@@ -2,6 +2,7 @@ import { ChapterContentType, ChapterType } from "@/types/types";
 import React from "react";
 import YouTube, { YouTubeProps } from "react-youtube";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 type ChapterContentProps = {
   chapter: ChapterType | null;
@@ -29,7 +30,7 @@ const ChapterContent = ({ chapter, content }: ChapterContentProps) => {
       <p className='text-gray-600 mb-6'>{chapter?.description}</p>
 
       {/* Video */}
-      <div className='aspect-w-16 aspect-h-9 mb-6'>
+      <div className='aspect-w-16 aspect-h-9 mb-6 bg-gray-100 rounded-lg shadow-md'>
         <YouTube
           videoId={content?.videoId}
           opts={videoOpts}
@@ -40,18 +41,24 @@ const ChapterContent = ({ chapter, content }: ChapterContentProps) => {
       <div>
         {content &&
           content.content.map((item, index) => (
-            <div key={index} className='mb-6 bg-sky-50 rounded-lg p-4 md:p-6'>
+            <div
+              key={index}
+              className='mb-6 bg-white rounded-lg shadow-md p-4 md:p-6'>
               <h3 className='font-semibold text-xl md:text-2xl mb-3'>
                 {item.title}
               </h3>
-              <ReactMarkdown className={"prose max-w-none"}>
+              <ReactMarkdown
+                className='prose max-w-none'
+                remarkPlugins={[remarkGfm]}>
                 {item.explanation}
               </ReactMarkdown>
               {item.code_examples && item.code_examples.length > 0 && (
                 <div className='bg-gray-800 text-white p-4 md:p-6 mt-3 rounded-md'>
                   {item.code_examples.map((example, idx) => (
-                    <pre key={idx} className='overflow-x-auto'>
-                      <code>
+                    <pre
+                      key={idx}
+                      className='overflow-x-auto rounded-md bg-gray-900 p-4'>
+                      <code className='text-sm'>
                         {Array.isArray(example.code)
                           ? example.code
                               .join("")

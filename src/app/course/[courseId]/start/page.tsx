@@ -11,6 +11,7 @@ import Image from "next/image";
 import UserToolTip from "./_components/UserToolTip";
 import ScrollProgress from "@/components/ui/scroll-progress";
 import Router, { useRouter } from "next/navigation";
+import Header from "@/app/dashboard/_components/Header";
 type CourseStartProps = {
   params: { courseId: string };
 };
@@ -66,8 +67,9 @@ const CourseStart = ({ params }: CourseStartProps) => {
 
   return (
     <div>
-      <div className='fixed md:w-64 hidden md:block h-screen border-r shadow-sm bg-white'>
-        <h2 className='font-semibold text-xl bg-primary p-4 text-white'>
+      <Header />
+      <div className='fixed md:w-64 hidden md:block h-screen border-r shadow-sm '>
+        <h2 className='font-semibold text-xl bg-primary p-4 '>
           {course?.courseOutput.topic}
         </h2>
         <div className='overflow-y-auto h-[calc(100vh-64px)]'>
