@@ -15,7 +15,7 @@ const HeroSection = () => {
         <div className="mx-auto max-w-xl text-center">
           <GradientTextAnimation title="Introducting AI Course Generator" />
           <WordPullUp
-            className="text-4xl font-bold tracking-[-0.02em] text-black md:text-7xl md:leading-[5rem] dark:text-white"
+            className="text-4xl font-bold tracking-[-0.02em] text-primary md:text-7xl md:leading-[5rem] "
             words="AI Course Generator"
           />
 
