@@ -66,30 +66,30 @@ const CourseStart = ({ params }: CourseStartProps) => {
 
   return (
     <div>
-      <div className="fixed md:w-64 hidden md:block h-screen border-r shadow-sm">
-        <h2 className="font-medium text-lg bg-primary p-4 text-white">
+      <div className='fixed md:w-64 hidden md:block h-screen border-r shadow-sm bg-white'>
+        <h2 className='font-semibold text-xl bg-primary p-4 text-white'>
           {course?.courseOutput.topic}
         </h2>
-        <div>
+        <div className='overflow-y-auto h-[calc(100vh-64px)]'>
           {course?.courseOutput.chapters.map((chapter, index) => (
             <div
               key={index}
-              className={`cursor-pointer hover:bg-purple-100 ${
-                selectedChapter?.chapter_name === chapter.chapter_name &&
-                "bg-purple-50"
+              className={`cursor-pointer p-3 hover:bg-purple-100 transition-colors duration-200 ${
+                selectedChapter?.chapter_name === chapter.chapter_name
+                  ? "bg-purple-50"
+                  : ""
               }`}
               onClick={() => {
                 setSelectedChapter(chapter);
                 getChapterContent(index);
-              }}
-            >
+              }}>
               <ChapterListCard chapter={chapter} index={index} />
             </div>
           ))}
         </div>
       </div>
 
-      <div className="md:ml-64">
+      <div className='md:ml-64'>
         {selectedChapter ? (
           <div>
             <ChapterContent
@@ -99,20 +99,20 @@ const CourseStart = ({ params }: CourseStartProps) => {
             <ScrollProgress />
           </div>
         ) : (
-          <div className="p-10 flex justify-center flex-col items-center">
+          <div className='p-10 flex justify-center flex-col items-center'>
             <Image
               src={course.courseBanner || "/thumbnail.png"}
               alt={course.courseName || "AI Course Generator"}
               width={350}
               height={10}
               priority
-              className="rounded-lg hover:shadow-lg hover:scale-105 transition-transform duration-500 cursor-pointer mt-20"
+              className='rounded-lg hover:shadow-lg hover:scale-105 transition-transform duration-500 cursor-pointer mt-20'
             />
-            <p className="felx justify-center gap-3 mt-10">
+            <p className='felx justify-center gap-3 mt-10'>
               lets get started with the course {course.courseOutput.topic}.
               Click on the chapters to get started. Enjoy learning!
             </p>
-            <p className="mt-10">
+            <p className='mt-10'>
               <UserToolTip
                 username={course.username || "AI Course Generator"}
                 userProfileImage={course.userprofileimage || "/userProfile.png"}
