@@ -10,7 +10,7 @@ import ChapterContent from "./_components/ChapterContent";
 import Image from "next/image";
 import UserToolTip from "./_components/UserToolTip";
 import ScrollProgress from "@/components/ui/scroll-progress";
-
+import Router, { useRouter } from "next/navigation";
 type CourseStartProps = {
   params: { courseId: string };
 };
@@ -20,6 +20,7 @@ const CourseStart = ({ params }: CourseStartProps) => {
   const [selectedChapter, setSelectedChapter] = useState<ChapterType | null>(
     null
   );
+  const router = useRouter();
   const [chapterContent, setChapterContent] =
     useState<ChapterContentType | null>(null);
 
@@ -52,11 +53,13 @@ const CourseStart = ({ params }: CourseStartProps) => {
           eq(CourseChapters.chapterId, chapterId),
           eq(CourseChapters.courseId, course.courseId)
         )
-      );
-
+    );
+     router.refresh();
+  
     // console.log("content", res);
 
     setChapterContent(res[0] as ChapterContentType);
+
   };
 
   //   console.log("chapterContent", chapterContent);
