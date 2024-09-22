@@ -1,6 +1,7 @@
 import { SignUp } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
+export const runtime = "edge";
 export default function Page() {
   return (
     <section className='container'>

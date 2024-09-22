@@ -21,6 +21,8 @@ import { eq } from "drizzle-orm";
 import { CourseType } from "@/types/types";
 import { UserCourseListContext } from "../_context/UserCourseList.context";
 
+
+export const runtime = "edge";
 const CreateCoursePage = () => {
   const [step, setStep] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(false);

@@ -4,12 +4,13 @@ const nextConfig = {
 
   images: {
     remotePatterns: [
-      {
-        protocol: "http",
-        hostname: "127.0.0.1",
-        port: "",
-        pathname: "/**", // Allow all paths from this hostname
-      },
+      // {
+      //   protocol: "http",
+      //   hostname: "127.0.0.1",
+      //   port: "",
+      //   pathname: "/**",
+      // },
+      
       {
         protocol: "https",
         hostname: "images.unsplash.com",
@@ -57,5 +58,9 @@ const nextConfig = {
     ];
   },
 };
+
+if (process.env.NODE_ENV === "development") {
+  await setupDevPlatform();
+}
 
 export default nextConfig;

@@ -15,7 +15,7 @@ type CourseParams = {
     courseId: string;
   };
 };
-
+export const runtime = "edge";
 const Course = ({ params }: CourseParams) => {
   const [course, setCourse] = useState<CourseType | null>(null);
   const getCourse = async () => {
