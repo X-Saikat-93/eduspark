@@ -18,8 +18,8 @@ const SelectCategory = () => {
         {categoryList.map((category, index) => (
           <div
             key={index}
-            className={`flex flex-col p-5 border items-center rounded-xl hover:border-primary hover:bg-blue-50 cursor-pointer ${
-              userInput?.category === category.name && "border-primary bg-blue-50"
+            className={`flex flex-col p-5 border items-center rounded-xl hover:border-primary hover:bg-blue-50 dark:hover:bg-primary/5 cursor-pointer ${
+              userInput?.category === category.name && "border-primary bg-muted "
             }`}
             onClick={() => handleCategorySelect(category.name)}
           >

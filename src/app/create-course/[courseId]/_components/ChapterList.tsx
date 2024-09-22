@@ -23,7 +23,7 @@ const ChapterList = ({ course, onRefresh, edit = true }: ChapterListProps) => {
             className="border p-5 rounded-lg mb-2 flex items-center justify-between"
           >
             <div className="flex gap-5 items-center">
-              <h2 className="bg-primary h-10 w-10 flex-none text-white rounded-full text-center p-2">
+              <h2 className="bg-primary h-10 w-10 flex-none text-secondary text-base rounded-full text-center p-2">
                 {index + 1}
               </h2>
               <div>

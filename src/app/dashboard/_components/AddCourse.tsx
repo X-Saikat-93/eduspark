@@ -18,7 +18,7 @@ const AddCourse = () => {
     <div className="flex justify-between items-center">
       <div>
         <h2 className="text-3xl">
-          Hello, <span className="font-bold">{user?.fullName}</span>
+          Hello, <span className="font-bold">{user?.firstName}</span>
         </h2>
         <p className="text-xs text-gray-500">
           Create new course with AI, share with friends and Earn some penny

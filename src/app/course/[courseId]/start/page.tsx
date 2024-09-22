@@ -103,7 +103,7 @@ const CourseStart = ({ params }: CourseStartProps) => {
         ) : (
           <div className='p-10 flex justify-center flex-col items-center'>
             <Image
-              src={course.courseBanner || "/thumbnail.png"}
+              src={course.courseBanner || "/thumbnailrobot.jpg"}
               alt={course.courseName || "AI Course Generator"}
               width={350}
               height={10}

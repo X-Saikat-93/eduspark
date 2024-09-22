@@ -6,7 +6,7 @@ import Link from "next/link";
 import MobileSidebar from "./MobileSidebar";
 const Header = () => {
   return (
-    <header className='sticky top-0 z-50 flex items-center justify-between p-4 shadow-md bg-white bg-opacity-80  dark:bg-gray-900 dark:bg-opacity-80'>
+    <header className='sticky top-0 z-50 flex items-center justify-between p-4 shadow-md  bg-card dark:bg-zinc-900 '>
       <Link href='/dashboard'>
 
       <Image
