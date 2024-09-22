@@ -6,6 +6,8 @@ import { AICourseText } from "./_components/AICourseText";
 import { HowItWorks } from "./_components/HowItWorks";
 
 export const runtime = "edge";
+
+
 export default function Home() {
   return (
     <>

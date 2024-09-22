@@ -1,5 +1,7 @@
 "use client";
 
+export const runtime = "edge";
+
 import { db } from "@/configs/db";
 import { CourseList } from "@/schema/schema";
 import { CourseType } from "@/types/types";

@@ -14,6 +14,8 @@ import LoadingDialog from "../_components/LoadingDialog";
 import { useRouter } from "next/navigation";
 import { CourseType } from "@/types/types";
 export const runtime = "edge";
+
+
 export type ParamsType = {
   courseId: string;
 };

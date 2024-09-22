@@ -11,6 +11,8 @@ import SkeletonLoading from "../_components/SkeletonLoading";
 
 
 export const runtime = "edge";
+
+
 const ExplorePage = () => {
   const [courseList, setCourseList] = useState<CourseType[] | null>(null);
   const [pageIndex, setPageIndex] = useState(0);

@@ -1,4 +1,6 @@
 "use client";
+export const runtime = "edge";
+
 import React, { useContext, useEffect, useMemo, useState } from "react";
 import { stepperOptions } from "./_constants/stepperOptions";
 import { Button } from "@/components/ui/button";
@@ -22,7 +24,8 @@ import { CourseType } from "@/types/types";
 import { UserCourseListContext } from "../_context/UserCourseList.context";
 
 
-export const runtime = "edge";
+
+
 const CreateCoursePage = () => {
   const [step, setStep] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(false);

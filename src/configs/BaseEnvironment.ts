@@ -1,3 +1,6 @@
+
+export const runtime = "edge";
+
 import { config } from "dotenv";
 
 config({ path: ".env.local" });

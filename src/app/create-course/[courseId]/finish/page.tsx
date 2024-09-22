@@ -12,7 +12,10 @@ import { IoCopyOutline } from "react-icons/io5";
 import { CourseType } from "@/types/types";
 import { ParamsType } from "../page";
 import Link from "next/link";
-export const runtime = "edge";
+
+// export const runtime = "edge";
+
+
 const FinsihScreen = ({ params }: { params: ParamsType }) => {
   const { user } = useUser();
   const [course, setCourse] = useState<CourseType | null>(null);

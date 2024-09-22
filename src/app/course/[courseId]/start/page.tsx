@@ -13,6 +13,8 @@ import ScrollProgress from "@/components/ui/scroll-progress";
 import Router, { useRouter } from "next/navigation";
 import Header from "@/app/dashboard/_components/Header";
 export const runtime = "edge";
+
+
 type CourseStartProps = {
   params: { courseId: string };
 };
