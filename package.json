@@ -9,7 +9,10 @@
     "lint": "next lint",
     "db:push": "drizzle-kit push --config src/drizzle.config.ts",
     "db:studio": "drizzle-kit studio --config src/drizzle.config.ts",
-    "db:generate": "drizzle-kit generate --config src/drizzle.config.ts"
+    "db:generate": "drizzle-kit generate --config src/drizzle.config.ts",
+    "pages:build": "pnpm exec @cloudflare/next-on-pages",
+    "preview": "pnpm run pages:build && pnpm exec wrangler pages dev",
+    "deploy": "pnpm run pages:build && pnpm exec wrangler pages deploy"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.3.5",
@@ -44,6 +47,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
