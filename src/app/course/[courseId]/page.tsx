@@ -15,7 +15,8 @@ type CourseParams = {
     courseId: string;
   };
 };
-export const runtime = "edge";
+// 
+
 
 
 const Course = ({ params }: CourseParams) => {

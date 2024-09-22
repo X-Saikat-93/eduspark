@@ -1,5 +1,6 @@
 "use client";
-export const runtime = "edge";
+// 
+
 
 import React, { useContext, useEffect, useMemo, useState } from "react";
 import { stepperOptions } from "./_constants/stepperOptions";

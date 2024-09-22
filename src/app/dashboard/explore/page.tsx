@@ -10,7 +10,8 @@ import { Badge } from "@/components/ui/badge";
 import SkeletonLoading from "../_components/SkeletonLoading";
 
 
-export const runtime = "edge";
+// 
+
 
 
 const ExplorePage = () => {
